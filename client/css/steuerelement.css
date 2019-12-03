@@ -1,0 +1,52 @@
+button{
+    border: solid #2260B6 2pt;
+    background-color: white;
+    color: #2260B6;
+    font-size: 25pt;
+    padding: 5px;
+    cursor: pointer;
+}
+button:hover{
+    color:white ;
+    background-color: #2260B6;
+}
+.navbar{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+.navbar li{
+    list-style-type: none;
+    flex: 1 0 auto;
+
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+.navbar li.active{
+    border-bottom: solid #2260B6 2pt;
+    cursor: default;
+}
+.list{
+    padding: 0;
+}
+.list li{
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.list li.active{
+    background-color: #2260B6;
+    color: white;
+
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
