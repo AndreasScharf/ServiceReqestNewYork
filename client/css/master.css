@@ -1,0 +1,31 @@
+*{
+    font-size: 18pt;
+}
+header{
+    border-bottom: #2260B6 solid 2pt;
+}
+.description{
+    margin: 20pt 15vw;
+    transition: height 0.4s;
+    height: auto;
+}
+.description.hide{
+    height: 0;
+    overflow: hidden;
+}
+.details{
+
+}
+.navbar li{
+    font-size: 32pt !important;
+}
+.navbar li.nachoben{
+    background-size: auto;
+    background-image: url('images/arrowup.png');
+    flex: 0 0 32pt;
+}
+.chart{
+    height: 600px;
+    background-color: #636363;
+    margin: 2vw 15vw;
+}

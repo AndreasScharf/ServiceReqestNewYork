@@ -33,7 +33,7 @@
             }
             click(JSON.parse(e.target.getAttribute('values')));
         });
-        if(!this.list.querySelector('li:first-of-type')){
+        if(!this.list.querySelector('li:first-of-type') && !element.notfirstActive){
             li.classList.add(this.active_class);
             click(element);
         }
