@@ -6,28 +6,26 @@ document.addEventListener('DOMContentLoaded', (e)=>{
 
     const list = new List(document.querySelector('.navbar'), 'active');
     list.clear();
-    list.add({text:'<-', class:'nachoben', notfirstActive:'hier steht was drinn', not_active:'no'}, (e)=>{
-        document.querySelector('.description').classList.remove('hide');
-
-    });
-    list.add({text: 'Real estate investor'}, (e)=>{
+    //list.add({text:'', class:'nachoben'}, (e)=>{
+    //    document.querySelector('.description').classList.remove('hide');
+    //});
+    function addHreff(e){
+    }
+    list.add({innerHTML: '<a href="#navbar">Real estate investor</a>'}, (e)=>{
         div1.style.display = 'block';
         div2.style.display = 'none';
         div3.style.display = 'none';
-        shrinkdescription();
-    });
-    list.add({text: 'Verwender2'}, (e)=>{
+    }, addHreff);
+    list.add({innerHTML: '<a href="#navbar">Verwender2</a>'}, (e)=>{
         div1.style.display = 'none';
         div2.style.display = 'block';
-        div3.style.display = 'none';
-    });
-    list.add({text: 'Verwender3'}, (e)=>{
+        div3.style.display = 'none'
+    }, addHreff);
+    list.add({innerHTML: '<a href="#navbar">Verwender3</a>'}, (e)=>{
         div1.style.display = 'none';
         div2.style.display = 'none';
         div3.style.display = 'block';
-    });
+    }, addHreff);
 
-    function shrinkdescription(){
-        document.querySelector('.description').classList.add('hide');
-    }
+
 });

@@ -1,31 +1,131 @@
 *{
     font-size: 18pt;
 }
+html {
+  scroll-behavior: smooth;
+}
 header{
-    border-bottom: #2260B6 solid 2pt;
+    font-size: 32pt;
+    background-color: #ccc;
+    margin: 0;
+    padding: 15pt 7.5vw;
+    display: flex;
+
+}
+header p{
+    font-size: 32pt;
+    color: #292929;
+
+    margin: 0;
+    flex: 1 0 auto;
+    margin-right: 15pt;
+}
+
+header a{
+    flex: 1 0 auto;
+    background-color: #ccc;
+    color: #292929;
+    border-color: #292929;
+    margin-right: 15pt;
+
+    border: solid #292929 2pt;
+    background-color: #ccc;
+    color: #292929;
+    font-size: 25pt;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+
+    font-style: normal;
+
+}
+header a:hover{
+    color: #ccc;
+    background-color: #292929;
 }
 .description{
-    margin: 20pt 15vw;
-    transition: height 0.4s;
+    margin: 20pt 7.5vw;
+    transition: max-height 0.4s;
     height: auto;
 }
 .description.hide{
-    height: 0;
+    max-height: 0;
     overflow: hidden;
+    margin: 5pt 7.5vw;
 }
 .details{
 
 }
-.navbar li{
+.navbar{
+    margin: 0 7.5vw;
+}
+.navbar li a{
     font-size: 32pt !important;
+    text-decoration: none;
+    color: black;
+}
+.navbar li a::selection{
+    color: black;
+}
+.navbar li.active{
+    border-color: #292929;
 }
 .navbar li.nachoben{
-    background-size: auto;
+    background-size: 110%;
     background-image: url('images/arrowup.png');
     flex: 0 0 32pt;
+    display: block;
+}
+.navbar li.nachoben.active{
+    display: none;
+
+}
+.charttext{
+    margin: 2vw 7.5vw;
+    margin-bottom: 0;
 }
 .chart{
     height: 600px;
     background-color: #636363;
-    margin: 2vw 15vw;
+    margin: 2vw 7.5vw;
+    margin-top: 0;
+}
+.text{
+    margin: 0 7.5vw;
+}
+.text p{
+    font-size: 25pt;
+}
+footer{
+    margin-top: 20pt;
+    background-color: #292929;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+footer .wrapper{
+    display: flex;
+    flex: 1 0 30px;
+    margin: 0 7.5vw;
+}
+footer .wrapper div{
+    flex: 1 0 10px;
+    text-align: center;
+    margin: auto;
+}
+footer p{
+    margin: 3pt 7.5vw;
+    flex: 0 0 24pt;
+    text-align: center;
+}
+@media screen and (max-device-width: 800px) {
+    header{
+        margin: auto 1vw;
+    }
+    footer{
+        margin: auto 1vw;
+
+    }
 }
