@@ -1,28 +1,33 @@
 *{
     font-size: 18pt;
+    color: white;
 }
 html {
   scroll-behavior: smooth;
+  background-color: #636363;
 }
 header{
     font-size: 32pt;
-    background-color: #ccc;
     margin: 0;
     padding: 15pt 7.5vw;
     display: flex;
 
 }
 header p{
-    font-size: 32pt;
-    color: #292929;
+    font-size: 42pt;
 
     margin: 0;
     flex: 1 0 auto;
     margin-right: 15pt;
 }
-
 header a{
+    text-align: center;
+    margin: auto;
     flex: 1 0 auto;
+    font-size: 25pt;
+    padding: 5px;
+}
+header a:last-child{
     background-color: #ccc;
     color: #292929;
     border-color: #292929;
@@ -31,8 +36,7 @@ header a{
     border: solid #292929 2pt;
     background-color: #ccc;
     color: #292929;
-    font-size: 25pt;
-    padding: 5px;
+
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -40,7 +44,7 @@ header a{
     font-style: normal;
 
 }
-header a:hover{
+header a:last-child:hover{
     color: #ccc;
     background-color: #292929;
 }
@@ -63,13 +67,13 @@ header a:hover{
 .navbar li a{
     font-size: 32pt !important;
     text-decoration: none;
-    color: black;
 }
 .navbar li a::selection{
     color: black;
 }
 .navbar li.active{
     border-color: #292929;
+    border-width: 2pt;
 }
 .navbar li.nachoben{
     background-size: 110%;
@@ -82,14 +86,40 @@ header a:hover{
 
 }
 .charttext{
-    margin: 2vw 7.5vw;
+    margin: calc(2vw + 5px) calc(7.5vw + 10px);
     margin-bottom: 0;
+    background-color: #292929;
+    padding: 5px;
 }
 .chart{
     height: 600px;
     background-color: #636363;
     margin: 2vw 7.5vw;
     margin-top: 0;
+    display:  flex;
+}
+.chart .innertext{
+    flex: 0 0 250pt;
+    background-color: rgb(30,30,30);
+    margin: 10px;
+    margin-right: 5px;
+    padding: 5px;
+}
+.chart .innerchart{
+    flex: 2 0 300px;
+    background-color: rgb(30,30,30);
+    margin: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.chart .innerchart:only-child{
+    flex-grow: 3;
+}
+.chart .innerchart:last-child{
+    margin-right: 10px;
+}
+webview{
+    margin: 2vw 7.5vw;
 }
 .text{
     margin: 0 7.5vw;

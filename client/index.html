@@ -6,44 +6,22 @@
 
         <link rel="stylesheet" href="/css/steuerelement.css">
         <link rel="stylesheet" href="/css/master.css">
+        <link rel="stylesheet" href="/css/d3.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
         <script type="text/javascript" src="/js/list.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--
-        <script>
-            $(document).ready(function(){
-                // Add smooth scrolling to all links
-                $("#about").on('click', function(event) {
+        <script src="https://kit.fontawesome.com/17def43369.js"></script>
 
-                    // Make sure this.hash has a value before overriding default behavior
-                    if (this.hash !== "") {
-                        // Prevent default anchor click behavior
-                        event.preventDefault();
+        <script src="http://d3js.org/d3.v4.min.js"></script>
+        <script src="//d3js.org/topojson.v1.min.js"></script>
 
-                        // Store hash
-                        var hash = this.hash;
-
-                        // Using jQuery's animate() method to add smooth page scroll
-                        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                        $('html, body').animate({
-                            scrollTop: $(hash).offset().top
-                        }, 800, function(){
-
-                            // Add hash (#) to URL when done scrolling (default click behavior)
-                            window.location.hash = hash;
-                        });
-                    } // End if
-                });
-            });
-        </script>
-    -->
     </head>
     <body>
         <header>
             <p>New York Service Request</p>
-            <a href="#about">About</a>
+            <a href="#about"><i class="fas fa-info-circle fa-2x"></i></a>
             <a  href="#motivation">Motivation</a>
         </header>
         <div class="main">
@@ -54,7 +32,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
             <ul class="navbar" id="navbar">
-                
+
             </ul>
             <div class="details">
                 <div class="div1">
@@ -62,7 +40,15 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                     <div class="chart">
+                        <div class="innertext">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="innerchart">
 
+                        </div>
+                        <div class="innerchart">
+
+                        </div>
                     </div>
                 </div>
                 <div class="div2" style="display: none">
@@ -70,13 +56,23 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                     <div class="chart">
+                        <div class="innertext">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="innerchart">
 
+                        </div>
                     </div>
                     <div class="charttext">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                     <div class="chart">
+                        <div class="innertext">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="innerchart">
 
+                        </div>
                     </div>
                 </div>
                 <div class="div3" style="display: none">
@@ -84,21 +80,590 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                     <div class="chart">
+                        <div class="innertext">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="innerchart">
 
+                        </div>
                     </div>
                     <div class="charttext">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                     <div class="chart">
+                        <div class="innertext">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="innerchart">
 
+                        </div>
                     </div>
                     <div class="charttext">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </div>
                     <div class="chart">
+                        <div class="innertext">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="innerchart">
 
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="d3">
+                <svg id="xbox" width="300" height="200" style="background: rgb(30,30,30)"></svg>
+                <svg id="topfloat" width="1000" height="200" style="background: rgb(30,30,30)"></svg>
+                <svg id="sidebar" width="300" height="1000" style="background: rgb(30,30,30)"></svg>
+                <svg id="canvas" width="1000" height="1000" style="background: rgb(30,30,30)"></svg>
+
+                <script type="text/javascript">
+
+                var xglob;
+                var yglob;
+                // grab graphic components
+                var xbox = d3.select("#xbox")
+                var topfloat = d3.select("#topfloat")
+                var canvas = d3.select("#canvas")
+                var sidebar = d3.select("#sidebar")
+
+                var agency = "All"
+                var month = "All"
+
+                // width and height of main canvas
+                var w = 1000;
+                var h = 1000;
+
+                var divn = d3.select("body").append("div")
+                  .attr("class", "tooltip")
+                  .style("opacity", 0)
+
+                  // top left corner just a title box
+                xbox
+                  .selectAll("text")
+                  .data([["NYC", 40, 50], ["311", 90, 115], ["Calls", 135, 175]])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", (d, i) => {return d[1]})
+                  .attr("y", (d, i) => {return d[2]})
+                  .style("text-anchor", "right")
+                  .style("font-size", 60)
+                  .attr("fill", "#fff")
+
+
+
+                // functions related to topfloat area
+                // draw text items for click functions
+                /*
+                var boros = topfloat
+                  .selectAll("text")
+                  .data([["NYC", 25], ["Bronx", 75],["Manhattan", 145], ["Brooklyn", 225], ["Queens", 295], ["StatenIsland", 375]])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("class", (d) => d[0] + " boro")
+                  .attr("x", (d) => { return d[1]})
+                  .attr("y", 12)
+                  .style("text-anchor", "middle")
+                  .style("font-size", 14)
+                  .attr("fill", (d) => {return d[0] == "NYC" ? "#fff" : "#424242"})
+                  .on("click", function() {
+                    d3.selectAll(".borofill").style("fill", "#333333")
+                  })
+                  */
+
+                // main canvas loading /////////////////////////
+
+                canvas
+                  .selectAll("text")
+                  .data([["New York City", 50], ["Pop. 8,398,748", 95]])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 150)
+                  .attr("y", (d, i) => { return d[1]})
+                  .style("text-anchor", "middle")
+                  .style("font-size", (d) => { return d[1] == 95 ? 20 : 30})
+                  .attr("fill", "#fff")
+
+                var agencyFilter = canvas
+                    .append("g")
+                    .selectAll("text")
+                    .data([["Filter by Agency",0],
+                          ["All",1],
+                          ["DOHMH",2],
+                          ["NYPD",3],
+                          ["DEP",4],
+                          ["DSNY",5],
+                          ["DOT",6],
+                          ["HPD",7],
+                          ["DOB",8],
+                          ["DPR",9],
+                          ["TLC",10],
+                          ["DHS",11],
+                          ["DOF",12],
+                          ["DCA",13],
+                          ["EDC",14],
+                          ["DOE",15],
+                          ["DOITT",16],
+                          ["DFTA",17]])
+                    .enter()
+                    .append("text")
+                    .text((d) => d[0])
+                    .attr("x", 925)
+                    .attr("y", (d, i) => { return i * 20 + 20})
+                    .attr("class", (d) => {return d[0] == "Filter by Agency" ? "filterTitle" : "agencyFilter"})
+                    .style("text-anchor", "middle")
+                    .style("font-size", (d) => {return d[0] == "Filter by Agency" ?  18 : 12})
+                    .attr("fill", (d) => {return d[0] == "Filter by Agency" || d[0] == "All" ? "#fff" : "#424242"})
+                    .on("click", function() {
+                      var agencySelection = d3.select(this);
+                      agency = agencySelection._groups[0][0].innerHTML
+
+                      d3.selectAll(".agencyFilter").attr("fill", "#424242")
+
+                      agencyFilter
+                        .filter((d) => d[0] == agency || d[0] == "Filter by Agency")
+                        .attr("fill", "#fff")
+
+                      canvas
+                        .selectAll(".crc")
+                        .style("opacity", function(d){
+                          if (agency == "All" && month == "All") return .8
+                          if (agency == "All" && monthMap[d["Month"]] == month) return .8
+                          if(d["Agency"] != agency) {return 0}
+                          else {
+                            if (monthMap[d["Month"]] == month || month == "All") {
+                              return .8
+                            } else {
+                              return 0
+                            }
+                          }
+                        })
+
+                    })
+
+                  var monthMap = {1:"Jan", 2:"Feb", 3:"Mar", 4:"Apr", 5:"May",6:"Jun",7:"Jul", 8:"Aug", 9:"Sep",10:"Oct", 11:"Nov",12:"Dec"}
+                  var monthFilter = canvas
+                    .append("g")
+                    .selectAll("text")
+                    .data([["Filter by Month",0],
+                          ["All",1],
+                          ["Jan",2],
+                          ["Feb",3],
+                          ["Mar",4],
+                          ["Apr",5],
+                          ["May",6],
+                          ["Jun",7],
+                          ["Jul",8],
+                          ["Aug",9],
+                          ["Sep",10],
+                          ["Oct",11],
+                          ["Nov",12]])
+                    .enter()
+                    .append("text")
+                    .text((d) => d[0])
+                    .attr("x", 925)
+                    .attr("y", (d, i) => { return i * 20 + 500})
+                    .attr("class", (d) => {return d[0] == "Filter by Month" ? "filterTitle" : "monthFilter"})
+                    .style("text-anchor", "middle")
+                    .style("font-size", (d) => {return d[0] == "Filter by Month" ?  18 : 12})
+                    .attr("fill", (d) => {return d[0] == "Filter by Month" || d[0] == "All" ? "#fff" : "#424242"})
+                    .on("click", function() {
+                      var monthSelection = d3.select(this);
+                      month = monthSelection._groups[0][0].innerHTML
+
+                      d3.selectAll(".monthFilter").attr("fill", "#424242")
+
+                      monthFilter
+                        .filter((d) => d[0] == month || d[0] == "Filter by Month")
+                        .attr("fill", "#fff")
+
+                      canvas
+                        .selectAll(".crc")
+                        .style("opacity", function(d){
+                          if (month == "All" && agency == "All") return .8
+                          if (month == "All" && d["Agency"] == agency) return .8
+                          if (monthMap[d["Month"]] != month) {return 0}
+                          else {
+                            if (d["Agency"] == agency || agency == "All") {
+                            return .8
+                          } else {
+                            return 0
+                          }
+                        }
+                      })
+
+                    })
+
+
+                // define projection and center on nyc
+                var projection = d3.geoConicEqualArea()
+                                  .parallels([40, 41])
+                                  .scale(110000)
+                                  .translate([w/2, h/2])
+                                  .rotate([96, 0])
+                                  .center([22.05, 40.68]);
+
+                // define path generator
+                var path = d3.geoPath()
+                            .projection(projection);
+
+                // %%%%%%%%%%%%%% change color map here
+                var coroColor = {
+                  "animal":"#ffff4d",
+                  "building":"#66a3ff",
+                  "construction":"#ffb833",
+                  "hazard":"#99e699",
+                  "homeless":"#e066ff",
+                  "infractions":"#0033ff",
+                  "noise":"#ff5c33",
+                  "other":"#4ddbff",
+                  "roadways":"#ff8095",
+                  "taxi":"#b30000",
+                  "vehicle":"#f2f2f2",
+                  "water":"#ccff66"
+                }
+
+                var legend = canvas
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                    ["animal","#ffff4d"],
+                    ["building","#66a3ff"],
+                    ["construction","#ffb833"],
+                    ["hazard","#99e699"],
+                    ["homeless","#e066ff"],
+                    ["infractions","#0033ff"],
+                    ["noise","#ff5c33"],
+                    ["other","#4ddbff"],
+                    ["roadways","#ff8095"],
+                    ["taxi","#b30000"],
+                    ["vehicle","#f2f2f2"],
+                    ["water","#ccff66"]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 50)
+                  .attr("y", (d, i) => { return i * 20 + 200})
+                  .attr("class", "lgd")
+                  .style("text-anchor", "left")
+                  .style("font-size", 12)
+                  .attr("fill", "#fff")
+
+
+                  var legendCircles = canvas
+                    .append("g")
+                    .selectAll("circle")
+                    .data([
+                    ["animal","#ffff4d"],
+                    ["building","#66a3ff"],
+                    ["construction","#ffb833"],
+                    ["hazard","#99e699"],
+                    ["homeless","#e066ff"],
+                    ["infractions","#0033ff"],
+                    ["noise","#ff5c33"],
+                    ["other","#4ddbff"],
+                    ["roadways","#ff8095"],
+                    ["taxi","#b30000"],
+                    ["vehicle","#f2f2f2"],
+                    ["water","#ccff66"]
+                    ])
+                    .enter()
+                    .append("circle")
+                    .attr("cx", 40)
+                    .attr("cy", (d, i) => { return i * 20 + 196})
+                    .attr("r", 6)
+                    .attr("fill", (d) => d[1])
+                    .style("opacity", .8)
+
+                  canvas
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                    ["Manhattan"]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 332)
+                  .attr("y", (d, i) => { return 300})
+                  .style("text-anchor", "left")
+                  .style("font-size", 12)
+                  .attr("fill", "#fff")
+
+                  canvas
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                    ["Queens"]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 750)
+                  .attr("y", (d, i) => { return 230})
+                  .style("text-anchor", "left")
+                  .style("font-size", 12)
+                  .attr("fill", "#fff")
+
+                  canvas
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                    ["Bronx"]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 550)
+                  .attr("y", (d, i) => { return 30})
+                  .style("text-anchor", "left")
+                  .style("font-size", 12)
+                  .attr("fill", "#fff")
+
+                  canvas
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                    ["Staten Island"]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 200)
+                  .attr("y", (d, i) => { return 620})
+                  .style("text-anchor", "left")
+                  .style("font-size", 12)
+                  .attr("fill", "#fff")
+
+                  canvas
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                    ["Brooklyn"]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 350)
+                  .attr("y", (d, i) => { return 565})
+                  .style("text-anchor", "left")
+                  .style("font-size", 12)
+                  .attr("fill", "#fff")
+
+                /*var ordColor = d3.scaleOrdinal(d3.schemeCategory20) */
+
+                // write in main text
+                sidebar
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["Navigating the Data", 1],
+                  ["Our data cuts along a few dimensions.",0],
+                  ["Colors reveal the type of complaint.",0],
+                  ["The filters allow you to slice along time and",0],
+                  ["by agencies of interest. The map allows you",0],
+                  ["to reason about all of this spatially.", 0],
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 5)
+                  .attr("y", (d, i) => {return i * 25 + 30})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                  sidebar
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["Micro-Stories",1],
+                  ["Our data revealed stories to investigate.",0],
+                  ["There're many to explore. Here're a few to",0],
+                  ["get started.",0]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 5)
+                  .attr("y", (d, i) => {return i * 25 + 220})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                  sidebar
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["Tourists lose things in taxis...",2],
+                  ["Take a look at TLC during the summer.",0]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 5)
+                  .attr("y", (d, i) => {return i * 25 + 350})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-style", "italic")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                  sidebar
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["It's noisy along the east river...",2],
+                  ["Look at NYPD claims in Harlem and the Bronx.",0],
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 5)
+                  .attr("y", (d, i) => {return i * 25 + 425})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-style", "italic")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                  sidebar
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["Lower manhattan sees the most claims related", 2],
+                  ["to homelessness...",2],
+                  ["Check out claims made to DHS.",0]
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 5)
+                  .attr("y", (d, i) => {return i * 25 + 500})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-style", "italic")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                  topfloat
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["This data represents calls made to ", 0],
+                  ["New York's 311 service.",0],
+                  ["The 311 service fields many different",0],
+                  ["types of calls from noise to lost",0],
+                  ["property to rodents and pests.",0],
+                  ["The calls are as diverse as the city.",0],
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 25)
+                  .attr("y", (d, i) => {return i * 25 + 40})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                  topfloat
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["New York is composed of five boroughs.", 0],
+                  ["Manhattan is often the most recognized,",0],
+                  ["with Brooklyn, the Bronx, and Queens not ",0],
+                  ["far behind. Staten Island is the least ",0],
+                  ["known further away from the city, but has",0],
+                  ["its own unique apsects and attractions.",0],
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 325)
+                  .attr("y", (d, i) => {return i * 25 + 40})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                  topfloat
+                  .append("g")
+                  .selectAll("text")
+                  .data([
+                  ["New York's boroughs contain smaller divisions.", 0],
+                  ["Within each borough are neighborhoods,",0],
+                  ["Each of which has its own unique",0],
+                  ["characteristics. Midtown is known for",0],
+                  ["Times Square, the West Village is known",0],
+                  ["for brownstones, and DUMBO for its bridges.",0],
+                  ])
+                  .enter()
+                  .append("text")
+                  .text((d) => d[0])
+                  .attr("x", 650)
+                  .attr("y", (d, i) => {return i * 25 + 40})
+                  .attr("class", "sbText")
+                  .style("text-anchor", "left")
+                  .style("font-size", (d) => { return d[1] == 1 ? 24 : 14})
+                  .attr("fill", "#fff")
+
+                // draw the basic map
+                d3.json('/borough.geojson', function(json){
+                    console.log("got geo json")
+
+
+                  // bind data and create one path per geojson feature
+                    canvas.selectAll("path")
+                		      .data(json.features)
+                				  .enter()
+                				  .append("path")
+                				  .attr("d", path)
+                          .style("stroke", "#aaa")
+                				  .style("fill", "#333333");
+
+                  d3.csv('/dots20.csv', function(data) {
+                    canvas.append("g")
+                          .selectAll("circle")
+                          .data(data).enter()
+                          .append("circle")
+                          .attr("class", (d) => {return d["Agency"] + " crc"})
+                          .attr("cx", (d) => {return projection([d["Longitude"],d["Latitude"]])[0]})
+                          .attr("cy", (d) => {return projection([d["Longitude"],d["Latitude"]])[1]})
+                          .attr("r", 2)
+                          .attr("fill", (d) => {return coroColor[d["ShrtCateg"]]})
+                          .style("opacity", .6)
+                          .on("mouseover", function(d){
+                            var opax = d3.select(this)
+
+                            if (opax._groups[0][0].style.opacity != "0") {
+                            divn.transition()
+                              .duration(10)
+                              .style("opacity", .9)
+                            divn.html("<strong> Agency: " + d.Agency + "<strong><br>" +
+                              "<strong> Date: " + d["Created Date"] + "<strong><br>" +
+                                "<strong> Complaint: " + d["Complaint Type"] + "<strong><br>" )
+                              .style("left", (d3.event.pageX + 5) + "px")
+                              .style("top", (d3.event.pageY - 50) + "px")
+                                }
+                            })
+                          .on("mouseout", function(d){
+                            divn.transition()
+                                .duration(500)
+                                .style("opacity", 0)
+                            })
+                        })
+                })
+
+                </script>
             </div>
             <div class="text about" id="about">
                 <p>About</p>
