@@ -1,5 +1,5 @@
 *{
-    font-size: 18pt;
+    font: 18pt sans-serif;
     color: white;
 }
 html {
@@ -89,7 +89,7 @@ header a:last-child:hover{
     margin: calc(2vw + 5px) calc(7.5vw + 10px);
     margin-bottom: 0;
     background-color: #292929;
-    padding: 5px;
+    padding: 25px;
 }
 .chart{
     height: 600px;
@@ -101,9 +101,10 @@ header a:last-child:hover{
 .chart .innertext{
     flex: 0 0 250pt;
     background-color: rgb(30,30,30);
+    font: 25px;
     margin: 10px;
     margin-right: 5px;
-    padding: 5px;
+    padding: 25px;
 }
 .chart .innerchart{
     flex: 2 0 300px;
