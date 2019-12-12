@@ -1,0 +1,85 @@
+.d3{
+
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 'xbox topfloat'
+                         'sidebar canvas';
+    margin-left: calc(7.5vw + 9px);
+    margin-top: 8px;
+
+}
+#xbox {
+  padding: 5px;
+  margin: 0 auto;
+
+}
+
+#topfloat {
+  padding: 5px;
+
+}
+
+#sidebar {
+  padding: 5px;
+  margin:  0 auto;
+
+}
+
+#canvas {
+  padding: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.d3 text {
+  font: 15px sans-serif;
+}
+
+
+.d3 header {
+  font-size: 30px;
+  font-weight: bold;
+  color: grey;
+}
+
+.d3 div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 120px;
+  height: 50px;
+  padding: 2px;
+  font: 10px sans-serif;
+  background: #595959;
+  color: #fff;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.d3 .button {
+  background-color: gray;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  top: 500px;
+  position: absolute;
+  left: 325px;
+}
+
+.d3 .monthFilter:hover {
+  cursor: pointer;
+  fill: #fff;
+
+}
+
+.d3 .agencyFilter:hover {
+  cursor: pointer;
+  fill: #fff
+}
