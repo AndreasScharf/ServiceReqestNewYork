@@ -94,7 +94,7 @@ header a:last-child:hover{
     padding: 25px;
 }
 .chart{
-    height: 600px;
+    height: auto;
     background-color: #636363;
     margin: 2vw 7.5vw;
     margin-top: 0;
@@ -114,6 +114,8 @@ header a:last-child:hover{
     margin: 10px;
     margin-left: 5px;
     margin-right: 5px;
+}
+.chart .innerchart > div{
 }
 .chart .innerchart:only-child{
     flex-grow: 3;
