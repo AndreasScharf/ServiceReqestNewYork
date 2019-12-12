@@ -1,4 +1,5 @@
  class List {
+
     constructor(html_list, active_class) {
         this.active_class = active_class;
         this.list = html_list;
@@ -22,7 +23,8 @@
             li.style[style] = element.style[style]
 
         li.addEventListener('click', (e)=>{
-
+            this.firstactive = true;
+            
             if(!element.not_active){
                 const oldelemnt = this.list.querySelector('.' + this.active_class);
                 if(oldelemnt)
@@ -35,6 +37,8 @@
         });
         if(!this.list.querySelector('li:first-of-type') && !element.notfirstActive){
             li.classList.add(this.active_class);
+            this.firstactive = true;
+
             click(element);
         }
         this.list.appendChild(li);

@@ -115,6 +115,10 @@ header a:last-child:hover{
     margin-left: 5px;
     margin-right: 5px;
 }
+iframe{
+    height: 883px !important;
+    width: 100% !important;
+}
 .chart .innerchart > div{
 }
 .chart .innerchart:only-child{
